@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG House and Garden</title>
+</head>
+<body>
+    <div class="responsive-svg-container" style="max-width: 600px; margin: 0 auto;">
+        <!-- The viewBox defines the coordinate system: min-x, min-y, width, height -->
+        <svg viewBox="0 0 500 500" style="border: 1px solid black; background-color: #87CEEB;">
+            
+            <!-- 1. RECTANGLES: Garden & House Base -->
+            <rect x="0" y="350" width="500" height="150" fill="#228B22" />
+            <rect x="150" y="200" width="200" height="150" fill="#556B2F" />
+            
+            <!-- Door with stroke styling -->
+            <rect x="225" y="270" width="50" height="80" fill="#D2691E" stroke="black" stroke-width="2" />
+            
+            <!-- 2. CIRCLES: Sun, Door Knob and bushes -->
+            <circle cx="400" cy="80" r="40" fill="yellow" />
+            <circle cx="265" cy="315" r="4" fill="black" />
+            <circle cx="100" cy="380" r="20" fill="#556B2F" />
+            <circle cx="400" cy="380" r="20" fill="#556B2F" />
+            
+            <!-- 3. ELLIPSES: Clouds -->
+            <ellipse cx="120" cy="100" rx="50" ry="25" fill="white" opacity="0.8" />
+            <ellipse cx="160" cy="90" rx="40" ry="20" fill="white" opacity="0.8" />
+            <ellipse cx="200" cy="100" rx="50" ry="25" fill="white" opacity="0.8" />
+
+        
+            <!-- 4. LINE: Chimney -->
+            <line x1="330" y1="160" x2="330" y2="80" stroke="#8B0000" stroke-width="25" />
+            
+            <!-- 5. PATHS: Roof and Garden Path -->
+            <!-- Roof: L = Line to, Z = Close path -->
+            <path d="M 130 200 L 250 100 L 370 200 Z" fill="#B22222" />
+            <!-- Garden Path: C = Cubic Bezier Curve -->
+            <path d="M 250 350 C 250 420, 150 450, 100 500" fill="none" stroke="#DAA520" stroke-width="30" />
+            
+            <!-- 6. GROUPING & TRANSFORMATIONS: Windows -->
+            <!-- The <g> tag applies the fill and stroke to all child elements identically -->
+            <g fill="lightblue" stroke="#000080" stroke-width="3">
+                <!-- Translate moves the 0,0 point of the rect to the specified x, y -->
+                <rect width="40" height="40" transform="translate(170, 230)" />
+                <rect width="40" height="40" transform="translate(290, 230)" />
+            </g>
+            
+            <!-- 7. TEXT -->
+            <text x="350" y="320" font-family="sans-serif" font-size="20" fill="black">My House</text>
+            
+        </svg>
+    </div>
+</body>
+</html>
